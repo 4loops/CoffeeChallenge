@@ -14,8 +14,8 @@ for i in range(NUM_ITERATIONS):
     if pot < 0:
         pot = 1.0
         fills[player] += 1
-        continue
-    coffee[player] += strategy[player]
+    else:
+        coffee[player] += strategy[player]
 
 scores = zip(strategy, coffee)
 scores = sorted(scores, key=lambda x: x[0])
